@@ -14,9 +14,9 @@ def cifra(mensagem, deslocamento, direcao):
 
 alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",
             "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-deveContinuar = True
 
-while deveContinuar:
+
+def main():
     direcaoUsuario = input("Você deseja criptografar ou descriptografar uma mensagem? ")
     while direcaoUsuario not in ["criptografar", "descriptografar"]:
         direcaoUsuario = input("Digite apenas 'criptografar' ou 'descriptografar': ")
@@ -24,4 +24,9 @@ while deveContinuar:
     deslocamentoUsuario = int(input("Qual é o número de deslocamento? "))
 
     cifra(mensagemUsuario, deslocamentoUsuario, direcaoUsuario)
-    deveContinuar = input("Deseja continuar? ").lower() == "sim"
+    if input("Deseja continuar? ").lower() == "sim":
+        main()
+
+
+if __name__ == "__main__":
+    main()
